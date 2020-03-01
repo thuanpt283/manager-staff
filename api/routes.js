@@ -3,6 +3,10 @@ module.exports = function(app) {
   let UsersCtrl = require('./controllers/UsersController');
   let RecordsCtrl = require('./controllers/RecordsController');
   // todoList Routes
+  app.get('/', function(req, res){
+    res.redirect('/users');
+ });
+
   app.route('/users')
     .get(UsersCtrl.get)
     // .post(UsersCtrl.store);
